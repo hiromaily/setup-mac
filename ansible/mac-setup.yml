@@ -1,0 +1,72 @@
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  sudo: no
+  roles:
+    - homebrew
+    - homebrew-cask
+  vars:
+    # Tap external Homebrew repositories.
+    #
+    # e.g.
+    # - homebrew/binary
+    homebrew_repositories:
+
+    # Managed Homebrew packages.
+    #
+    # e.g.
+    # - package_name
+    # or
+    # { name: package_name, state: package_state, install_options: [with-baz, enable-debug] }
+    #
+    # state choices: [head, latest, present, absent, linked, unlinked] (default latest)
+    # install_options: string or sequence (default none)
+    homebrew_packages:
+      - git
+      - putty
+      - vim
+      - zsh
+      - zsh-completions
+      - go
+      - node.js
+      - python
+      - mercurial
+      - tree
+      - wget
+      - wget
+      - openssl
+      - { name: openssl, state: linked, install_options: force }
+
+    # Tap external Homebrew Cask repositories.
+    homebrew_cask_repositories:
+
+    # Managed Homebrew Cask packages.
+    #
+    # e.g.
+    # - package_name
+    # or
+    # { name: package_name, state: package_state }
+    #
+    # state choices: [present, absent, installed, uninstalled] (default present)
+    homebrew_cask_packages:
+      - google-chrome
+      - firefox
+      - google-japanese-ime
+      - karabiner
+      - dropbox
+      - skype
+      - slack
+      - transmit
+      - vagrant
+      - virtualbox
+      - visual-studio-code
+      - intellij-idea
+      - pycharm
+      - sublime-text
+      - sequel-pro
+      - onyx
+      - android-file-transfer
+      - avast
+      - flux
+      - gyazo
+      - docker
