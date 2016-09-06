@@ -26,6 +26,7 @@ brew install python
 brew install pyenv
 brew install mysql
 brew install redis
+brew install mongodb
 brew install ansible
 brew install mercurial
 brew install tree
@@ -33,6 +34,7 @@ brew install wget
 brew install nmap
 brew install readline
 brew install tmux
+brew install jq
 
 # installed app list
 brew -v list
@@ -83,8 +85,6 @@ brew cask install sublime-text
 # development
 brew cask install sequel-pro
 brew cask install android-file-transfer
-brew cask install virtualbox
-brew cask install vagrant
 brew cask install docker
 brew cask install dropbox
 brew cask install transmit
@@ -93,25 +93,42 @@ brew cask install transmit
 brew cask install karabiner
 brew cask install google-japanese-ime
 brew cask install onyx
-brew cask install avast
-brew cask install mplayerx
 brew cask install iexplorer
 brew cask install the-unarchiver
+brew cask install gyazo
 #brew cask install flux
-#brew cask install gyazo
 #brew cask install reflector
+
+# require passowrd
+brew cask install avast
+brew cask install virtualbox
+brew cask install vagrant
 
 
 # info
 #brew cask info docker
 
+# search
+#brew cask search intellij-idea
+
 ###############################################################################
 # brew cask for home
 ###############################################################################
 #brew cask install vuescan
-#brew cask install dockertoolbox
 #brew cask install transmission
+#brew cask install mplayerx
 
 
 # upgrade
 brew upgrade
+
+###############################################################################
+# 手動で
+###############################################################################
+#* IntelliJ IDEA Community Edition
+#* transmit (FTP)
+#* coda2
+#* MacX DVD Ripper Pro
+# (http://www.macxdvd.com/download/macx-dvd-ripper-pro.dmg)
+#* Java
+#*Robomongo
