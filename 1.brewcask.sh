@@ -14,6 +14,19 @@ xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 
+# cask
+brew tap caskroom/cask
+
+# Brewfile
+if [ -f ./Brewfile ]; then
+    #setting directory
+    export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+    brew bundle
+    exit 0
+fi
+
+
 # brew
 brew install git
 brew install putty
@@ -45,16 +58,6 @@ brew -v list
 # upgrade
 #brew upgrade
 
- #Error: You must `brew link go` before mongodb can be installed
- #Error: The `brew link` step did not complete successfully
- # brew unlink go
- # brew link --overwrite go
- # brew link --overwrite --dry-run go
- #Error: The `brew link` step did not complete successfully
- # rm '/usr/local/bin/docker'
- # brew link --overwrite docker
- # brew link --overwrite --dry-run docker
-
 # clean outdated
 #brew cleanup
 
@@ -67,6 +70,9 @@ brew -v list
 
 #setting directory
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+
+# development
+brew cask install iterm2
 
 # browser
 brew cask install google-chrome
@@ -122,13 +128,5 @@ brew cask install vagrant
 # upgrade
 brew upgrade
 
-###############################################################################
-# 手動で
-###############################################################################
-#* IntelliJ IDEA Community Edition
-#* transmit (FTP)
-#* coda2
-#* MacX DVD Ripper Pro
-# (http://www.macxdvd.com/download/macx-dvd-ripper-pro.dmg)
-#* Java
-#*Robomongo
+# check
+brew doctor
