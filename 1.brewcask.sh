@@ -14,9 +14,6 @@ xcode-select --install
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 
-# cask
-brew tap caskroom/cask
-
 # Brewfile
 if [ -f ./Brewfile ]; then
     #setting directory
@@ -65,12 +62,6 @@ brew -v list
 ###############################################################################
 # brew cask
 ###############################################################################
-#brew uninstall --force brew-cask; brew update
-#brew tap caskroom/cask
-
-#setting directory
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
 # development
 brew cask install iterm2
 
@@ -99,16 +90,10 @@ brew cask install transmit
 brew cask install karabiner
 brew cask install google-japanese-ime
 brew cask install onyx
-brew cask install iexplorer
 brew cask install the-unarchiver
-brew cask install gyazo
-#brew cask install flux
-#brew cask install reflector
 
 # require passowrd
 brew cask install avast
-brew cask install virtualbox
-brew cask install vagrant
 
 
 # info
@@ -116,14 +101,6 @@ brew cask install vagrant
 
 # search
 #brew cask search intellij-idea
-
-###############################################################################
-# brew cask for home
-###############################################################################
-#brew cask install vuescan
-#brew cask install transmission
-#brew cask install mplayerx
-
 
 # upgrade
 brew upgrade
